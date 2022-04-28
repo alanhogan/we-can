@@ -1,0 +1,17 @@
+{
+  "name": "we-can",
+  "version": "0.0.0",
+  "description": "Small, simple, TypeScripted library for asynchronously defining client-side abilities and executing them.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "author": "Alan Hogan",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "^28.0.2",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.5"
+  }
+}

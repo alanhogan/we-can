@@ -1,0 +1,3 @@
+window.party = function () {
+    alert("🎊🎈 🥳 🎉🎉🎉");
+}
