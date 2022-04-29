@@ -14,6 +14,11 @@ app.innerHTML = `
   <div>
     <button disabled class="js-party">Party!</button>
   </div>
+
+
+  <div hidden class="js-dance-wrap">
+    <button class="js-dance">Dance!</button>
+  </div>
 `
 We.should('strikeThroughLinks');
 We.should('boldenLinks');
@@ -31,6 +36,12 @@ We.can('learnToPartyIfNeeded', () => {
       We.can('party', () => {
         // @ts-ignore
         window.party();
+
+        // Show and enable dance button
+        document.querySelector('.js-dance-wrap').removeAttribute('hidden');
+        document.querySelector('.js-dance').addEventListener('click', () => {
+          We.should('dance');
+        });
       });
 
       document.querySelectorAll('.js-party').forEach((e) => {
@@ -45,3 +56,11 @@ We.can('learnToPartyIfNeeded', () => {
 });
 
 We.should('learnToPartyIfNeeded');
+
+// We should be global so dance.js can teach dancing
+// @ts-ignore
+window.We = We;
+
+// This time use We.canLearnTo
+We.canLearnTo('dance', 'src/dance.js');
+
